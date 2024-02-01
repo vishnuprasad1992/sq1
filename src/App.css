@@ -1,3 +1,62 @@
-.home{
-    min-height: 100vh;
+.home,
+.dashboard {
+  min-height: 100vh;
+}
+.fs-15 {
+  font-size: 1.5rem;
+}
+.chart-leg {
+  font-size: 1rem !important;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  font-weight: 500;
+}
+a {
+  width: 100%;
+  text-align: center;
+}
+a:hover {
+  background: lightskyblue;
+  opacity: 0.5;
+}
+.active {
+  border-left: 0.25rem solid #fff;
+}
+.text-blue {
+  color: #143b64 !important;
+}
+.upper-card__span {
+  font-size: small;
+  font-weight: 500;
+  width: 75%;
+}
+.pad-r{
+  padding-right: 1rem;
+}
+.h-max {
+  height: max-content;
+}
+.email-img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+}
+.dashboard td{
+  vertical-align: middle;
+  color: #777 !important;
+}
+.notification{
+  background: #efeff9;
+}
+.status-btn{
+  width: max-content;
+  font-weight: 600 !important;
+  margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .py-sm-2F {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
 }

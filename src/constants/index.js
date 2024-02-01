@@ -1,3 +1,18 @@
+import {
+    faTableColumns,
+    faChartLine,
+    faGear,
+    faUsers,
+    faFile,
+    faPowerOff,
+    faBackward,
+    faEllipsisVertical,
+    faBook,
+    faChartPie,
+    faUserCheck,
+    faMoneyBill1
+  } from "@fortawesome/free-solid-svg-icons";
+
 export const tableHeadings = [
     "#",
     "Emp. Id",
@@ -26,5 +41,23 @@ export const addFormFields = {
     mobile: { type: 'text', name: 'mobile', label:'Mobile',placeHolder:'Enter Mobile No.' }, 
     role: { type: 'select', name: 'role', label:'Select Role' } 
 }
-
+export const sideMenu = [
+    {path:'/dashboard',icon:faTableColumns},
+    {path:'/analytics',icon:faChartLine},
+    {path:'/users',icon:faUsers},
+    {path:'/reports',icon:faFile},
+    {path:'/settings',icon:faGear},
+    {path:'/',icon:faPowerOff,className:'position-absolute bottom-0'},
+    {path:'/',icon:faBackward,className:'position-absolute top-0'}
+]
+export const upperCards = [
+    {lIcon:faBook,rIcon:faEllipsisVertical,mText:'$1234',bText:'This is your bank balance'},
+    {lIcon:faChartPie,rIcon:faEllipsisVertical,mText:'80%',bText:'Maximum Percentage'},
+    {lIcon:faUserCheck,rIcon:faEllipsisVertical,mText:'7',bText:'employees working today'},
+    {lIcon:faMoneyBill1,rIcon:faEllipsisVertical,mText:'$500',bText:'This weeks card spending'},
+]
+export const chartCards = [
+    {title:'New clients',value:'54',badge:'+18.7%',isClient:true},
+    {title:'Invoices overdue',value:'6',badge:'+2.7%',isClient:false},
+]
 export const selectRoles=['labor','manager','supervisor']
