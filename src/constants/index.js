@@ -16,13 +16,15 @@ export const deleteBtns = [
     { title: 'Cancel', variant: 'danger', isCancel: true }
 ]
 export const editBtns = [
-    { title: 'Edit', variant: 'secondary' }, 
+    { title: 'Update Employee', variant: 'secondary' }, 
     { title: 'Cancel', variant: 'danger', isCancel: true }
 ]
 export const addFormFields = { 
-    emp_id: { type: 'number', name: 'emp_id', label:'Employee ID',placeHolder:'Enter ID' }, 
+    emp_id: { type: 'text', name: 'emp_id', label:'Employee ID',placeHolder:'Enter ID' }, 
     name: { type: 'text', name: 'name', label:'Name' , placeHolder:'Enter Name' } ,
     email: { type: 'email', name: 'email', label:'Email',placeHolder:'Enter Email' }, 
-    mobile: { type: 'number', name: 'mobile', label:'Mobile',placeHolder:'Enter Mobile No.' }, 
+    mobile: { type: 'text', name: 'mobile', label:'Mobile',placeHolder:'Enter Mobile No.' }, 
     role: { type: 'select', name: 'role', label:'Select Role' } 
 }
+
+export const selectRoles=['labor','manager','supervisor']
