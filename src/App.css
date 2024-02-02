@@ -30,7 +30,7 @@ a:hover {
   font-weight: 500;
   width: 75%;
 }
-.pad-r{
+.pad-r {
   padding-right: 1rem;
 }
 .h-max {
@@ -41,19 +41,72 @@ a:hover {
   width: 48px;
   border-radius: 50%;
 }
-.dashboard td{
+.dashboard td {
   vertical-align: middle;
   color: #777 !important;
 }
-.notification{
+.notification {
   background: #efeff9;
 }
-.status-btn{
+.data-section {
+  height: 95vh;
+  scrollbar-width: thin;
+}
+.status-btn {
   width: max-content;
   font-weight: 600 !important;
   margin: auto;
 }
-
+.to-do {
+  height: 25vh;
+  scrollbar-width: thin;
+}
+.to-do__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: aqua;
+  text-align: center;
+  padding-top: 0.25rem;
+}
+.dropdown__icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fs-menu{
+  font-size: 12px;
+}
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submenu-item {
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  text-align: center;
+}
+.notification-dot {
+  width: 12px;
+  height: 12px;
+  background: red;
+  border-radius: 50%;
+  top: -0.5rem;
+  right: -0.25rem;
+}
+.pointer{
+  cursor: pointer;
+}
+.w-max{
+  width: max-content !important;
+}
 @media only screen and (max-width: 600px) {
   .py-sm-2F {
     padding-top: 1rem !important;

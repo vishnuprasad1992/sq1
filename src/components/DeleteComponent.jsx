@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import { deleteBtns } from "../constants";
 
+// delete modal component
 const DeleteComponent = ({handleClose,handleSumbit}) => {
   return (
     <>

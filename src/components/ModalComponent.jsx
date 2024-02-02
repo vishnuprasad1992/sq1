@@ -2,6 +2,7 @@ import {Modal} from "react-bootstrap";
 
 const ModalComponent = ({ children,title,show,handleClose}) => {
   return (
+    // common modal wrapper component
     <Modal show={show} onHide={handleClose} aria-labelledby="vertical" centered animation={false}>
       <Modal.Header closeButton>
         <Modal.Title id="vertical">{title}</Modal.Title>

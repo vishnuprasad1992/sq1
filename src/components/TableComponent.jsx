@@ -9,47 +9,68 @@ import DeleteComponent from "./DeleteComponent";
 import { toast } from "react-toastify";
 
 const TableComponent = () => {
+  // use state hooks 
   const [data, setData] = useState([]);
   const [item, setItem] = useState(null);
-  const navigate = useNavigate();
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [isEdit, setIsEdit] = useState(false);
   const [isAddModal, setIsAddModal] = useState(false);
 
+  // use navigation
+  const navigate = useNavigate();
+
   useEffect(() => {
+    // calling get employees function
     getEmployees();
   }, []);
+
+  // setting all values as false
   const handleClose = () => {
     setIsAddModal(false);
     setIsEdit(false);
     setShowDeleteModal(false);
     setItem(null);
   };
+  // get employee api call
   const getEmployees = async () => {
-    const result = await getRequest("users");
-    setData(result?.data);
+    try {
+      const result = await getRequest("users");
+      setData(result?.data);
+    } catch (error) {
+      toast('Something went wrong')
+    }
   };
+
+  // delete function to show delete modal
   const handleDelete = (item) => {
     setItem(item);
     setShowDeleteModal(true);
   };
+  // edit function to show edit modal
   const handleEdit = (item) => {
     setItem(item);
     setIsEdit(true);
   };
+
+  // delete api call
   const handleDeleteSubmit = async () => {
     const response = await deleteRequest(`users/${item.id}`);
     if (response.status === 200) {
       toast("Employee Deleted Successfully");
+      // refreshing the data
       getEmployees();
+      // closing the delete modal
       handleClose();
-    }
+    }else toast('Something went wrong')
   };
 
   return (
     <>
+    {/* header section */}
       <div className="d-flex justify-content-between align-items-center">
+        {/* table heading */}
         <h4 className="mb-3">Employee Details</h4>
+        {/* action buttons */}
         <div className="text-end my-2 mb-4">
           <Button
             variant="primary"
@@ -65,7 +86,7 @@ const TableComponent = () => {
             onClick={() => setIsAddModal(true)}
             className="fw-bold fs-w500  ms-2"
           >
-            Add Employee
+            Add Employee +
           </Button>
         </div>
       </div>
@@ -118,6 +139,7 @@ const TableComponent = () => {
         </tbody>
       </Table>
 
+            {/* to show delete modal  and add modal*/}
       <ModalComponent
         show={(item && (showDeleteModal  || isEdit)) || isAddModal}
         handleClose={handleClose}

@@ -10,7 +10,17 @@ import {
     faBook,
     faChartPie,
     faUserCheck,
-    faMoneyBill1
+    faMoneyBill1,
+    faMoneyBill,
+    faClock,
+    faSign,
+    faAdd,
+    faCalendarDays,
+    faBell,
+    faMessage,
+    faDollar,
+    faDatabase,
+    faEye
   } from "@fortawesome/free-solid-svg-icons";
 
 export const tableHeadings = [
@@ -59,5 +69,22 @@ export const upperCards = [
 export const chartCards = [
     {title:'New clients',value:'54',badge:'+18.7%',isClient:true},
     {title:'Invoices overdue',value:'6',badge:'+2.7%',isClient:false},
+]
+export const todoList = [
+    {title:'Run payroll',date:new Date(),icon:faMoneyBill},
+    {title:'Review time off request',date:new Date(),icon:faClock},
+    {title:'Sign board resolution',date:new Date(),icon:faSign},
+    {title:'Finish onboarding Tony',date:new Date(),icon:faAdd},
+]
+export const subMenuList = [
+    {icon:faCalendarDays},
+    {icon:faBell,isNotification:true},
+    {icon:faMessage,isNotification:true},
+    {icon:faCalendarDays,isImg:true,img:'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg'}
+]
+export const menuDropdown = [
+    {icon:faDollar,text:"Make payment"},
+    {icon:faDatabase,text:"View balance details"},
+    {icon:faEye,text:"View account details"}
 ]
 export const selectRoles=['labor','manager','supervisor']

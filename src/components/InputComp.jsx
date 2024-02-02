@@ -4,7 +4,8 @@ import { selectRoles } from "../constants";
 
 const InputComp = ({ addFormFields, handleChange, data, errs }) => {
   return (
-    <Form>
+    // form element for handle the inputs
+    <Form> 
       {Object.values(addFormFields).map((item, i) =>
         item.type === "select" ? (
           <div className="d-flex">

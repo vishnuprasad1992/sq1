@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useLocation } from "react-router-dom";
 
+// Link component 
 const LinkComponent = ({ path, className, icon }) => {
   const location =useLocation();
   
